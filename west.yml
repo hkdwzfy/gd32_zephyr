@@ -23,6 +23,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: yunrihc
+      url-base: git@gitlab.yunrihc.com:yunrihc/gd32_zephyr
 
   group-filter: [-babblesim, -optional, -testing]
 
@@ -417,6 +419,20 @@ manifest:
       revision: 9164bd18dcd88ff9d9ef98279501fc1093571017
       path: modules/lib/zcbor
   # zephyr-keep-sorted-stop
+
+  # yunrihc custom projects
+    - name: boards
+      remote: yunrihc
+      path: modules/yunrihc/boards
+      revision: main
+      groups:
+        - yunrihc
+    # - name: drivers
+    #   remote: yunrihc
+    #   path: modules/yunrihc/drivers
+    #   revision: main
+    #   groups:
+    #     - yunrihc
 
   self:
     path: zephyr
